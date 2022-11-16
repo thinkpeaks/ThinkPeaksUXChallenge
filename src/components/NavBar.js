@@ -1,27 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import MuiAppBar from '@mui/material/AppBar';
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+const NavBar = (props) => {
+  return(
+    <div>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography component="h2" variant="h6" color="white" gutterBottom>
+            Think Peaks UI|UX Challenge
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
+}
 
-const drawerWidth = 240;
-
-const NavBar  = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
 
 NavBar.propTypes = {
   children: PropTypes.node,
