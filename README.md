@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Think Peaks UI|UX Challenge
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The Web App page is powered by [React Mui](https://mui.com/) ([material-mui DOC](https://mui.com/material-ui/getting-started/overview/)).
+
+## Goal of the challenge
+* search & found bad practice regarding UI / UX "hided" in the page
+* Implement a simple React component using React Mui based on this mockup/image: 
+  <img src="https://drive.google.com/uc?export=view&id=1Pz1oG5V1QbRujkBzo_SySGsOq9RSPuI2">
+
 
 ## Available Scripts
 
