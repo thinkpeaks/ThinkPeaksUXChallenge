@@ -15,11 +15,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
-import {Grid} from "@mui/material";
+import {CardContent, Grid, Icon} from "@mui/material";
 import SomeTable from "./components/ContentTable";
 import BlogPost from "./components/BlogPost";
 import {featuredPosts} from "./config/blogPosts";
 import MultiForm from "./components/MultiForm";
+import Paper from "@mui/material/Paper";
+import TitleAlt from "./components/TitleAlt";
+import {Card} from "@material-ui/core";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const drawerWidth = 240;
 
@@ -92,7 +96,8 @@ export default function MyApp () {
       <MyDrawer variant="permanent" open={open} toggleDrawer={toggleDrawer}/>
         <MyContainer>
         <Toolbar />
-          <Grid container >
+
+          <Grid  >
             <MultiForm/>
           </Grid>
           <Grid container >
@@ -107,7 +112,16 @@ export default function MyApp () {
           <Grid>
             <SomeTable/>
           </Grid>
-        <Box component={"div"} sx={{textAlgin:"left"}}>{"<-"}</Box>
+          <Grid  >
+            <Paper variant="outlined" sx={{my: {xs: 3, md: 6}, p: {xs: 2, md: 3}}}>
+              <TitleAlt>Some informations about this challenge</TitleAlt>
+              <CardContent>
+                <Typography variant="body1" >
+                  You can fork me on <a href="https://github.com/thinkpeaks/ThinkPeaksUXChallenge"><GitHubIcon fontSize="small"/> Github</a>. <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </Typography>
+              </CardContent>
+            </Paper>
+          </Grid>        <Box component={"div"} sx={{textAlgin:"left"}}>{"<-"}</Box>
       </MyContainer>
         </Box>
       </ThemeProvider>
